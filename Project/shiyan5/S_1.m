@@ -1,0 +1,26 @@
+k=0:4;
+h=[1 1 1 1 1];
+f=0.5.^k ;
+y1=conv(h, f);
+t1=0:length(y1)-1 ;
+k1=2:6;
+f2=0.5.^k ;
+y2=conv(h,f2);
+t2=2:length(y2)+1;
+subplot (2,2,1) ;
+stem(k, h);
+grid on;
+
+title(' h[k]');
+subplot(2,2,2);
+stem(k,f) ;
+grid on;
+title('f[k]');
+subplot(2,2,3) ; 
+stem(t1,y1) ;
+grid on;
+title( 'y1[k]') ;
+subplot (2,2,4) ; 
+stem(t2,y2);
+grid on;
+title('y2[k]');

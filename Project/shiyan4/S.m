@@ -1,0 +1,10 @@
+num=[1 0 -4];
+den=[1 2 -3 2 1];
+zs=roots(num);
+ps=roots(den);
+figure(1);
+plot(real(zs),imag(zs),'o',real(ps),imag(ps),'ks','markersize',12);
+axis([-4,3,-1,1]);
+grid on;
+sys=tf(num,den);
+figure(2);pzmap(sys);

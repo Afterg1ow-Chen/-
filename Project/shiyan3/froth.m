@@ -1,0 +1,15 @@
+b=[1 0];
+a=[1 3 2];
+w=linspace(0,5,280);
+H=freqs(b,a,w);
+figure(1);
+subplot(2,1,1);
+plot(w,abs(H));
+xlabel( ' \omega' ) ;
+ylabel( '|H(j\omega) |');
+grid on;
+subplot(2,1,2);
+plot(w,angle(H));
+xlabel( ' \omega ' ) ;
+ylabel( ' \phi ' );
+grid on;

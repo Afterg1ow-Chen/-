@@ -1,0 +1,15 @@
+num=[1 4];
+den=[1 3 2];
+sys=tf(num,den);
+t=0:0.01:10;
+h=impulse(sys,t);
+figure(1);
+plot(t,h);
+xlabel('t(s)');
+ylabel('h(t)');
+[H, w]=freqs( num,den) ;
+figure(2);
+plot(w,abs(H));
+xlabel('\omega( rad/s) ');
+ylabel( '|H(j\omega)|');
+title( ' Magenitude Response ' );
